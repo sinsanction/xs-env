@@ -2,3 +2,9 @@
 	path = NEMU
 	url = https://github.com/OpenXiangShan/NEMU
 	branch = xs
+[submodule "NutShell"]
+	path = NutShell
+	url = https://github.com/sinsanction/NutShell.git
+[submodule "nexus-am"]
+	path = nexus-am
+	url = https://github.com/sinsanction/nexus-am.git
