@@ -23,7 +23,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Setup XiangShan environment
+      - name: Setup RV-CVP environment
         run: |
             git config --global url."https://github.com/".insteadOf git@github.com:
             git config --global url."https://".insteadOf git://
@@ -34,20 +34,3 @@ jobs:
         run: |
             cd $GITHUB_WORKSPACE
             source ./env-test.sh
-      
-# Github hosted CI does not support XiangShan
-  sim-xiangshan:
-    runs-on: self-hosted
-    steps:
-      - uses: actions/checkout@v2
-      - name: Sim XiangShan using Verilator
-        run: |
-            git config --global url."https://github.com/".insteadOf git@github.com:
-            git config --global url."https://".insteadOf git://
-            cd $GITHUB_WORKSPACE
-            source ./setup.sh
-            source ./env.sh
-            cd $GITHUB_WORKSPACE/XiangShan
-            make clean
-            make emu CONFIG=MinimalConfig
-            ./build/emu -b 0 -e 0 -i ./ready-to-run/linux.bin
