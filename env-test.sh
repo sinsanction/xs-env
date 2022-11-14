@@ -1,6 +1,6 @@
-# This script will check if XiangShan develop environment has been setup correctly
+# This script will check if RV-CVP develop environment has been setup correctly
 
-# Setup XiangShan environment variables
+# Setup RV-CVP environment variables
 source env.sh
 # OPTIONAL: export them to .bashrc
 
