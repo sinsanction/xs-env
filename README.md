@@ -8,7 +8,7 @@ RV-CVP Develop Environment
 使用以下脚本来布署开发环境，**部署脚本只需运行一次.**：
 
 ```sh
-git clone https://github.com/OpenXiangShan/xs-env
+git clone https://github.com/sinsanction/xs-env
 cd xs-env
 sudo -s ./setup-tools.sh # use apt to install dependencies, you may modify it to use different pkg manager
 source setup.sh # prepare tools, test develop env using a small project
